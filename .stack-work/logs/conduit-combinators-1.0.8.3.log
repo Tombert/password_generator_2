@@ -1,0 +1,87 @@
+Configuring conduit-combinators-1.0.8.3...
+Building conduit-combinators-1.0.8.3...
+Preprocessing library conduit-combinators-1.0.8.3...
+[1 of 5] Compiling Data.Conduit.Combinators.Stream ( Data/Conduit/Combinators/Stream.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Data/Conduit/Combinators/Stream.o )
+
+Data/Conduit/Combinators/Stream.hs:196:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Monoid builder
+    • In the type signature for:
+           sinkLazyBuilderS :: (Monad m, Monoid builder, ToBuilder a builder,
+                                Builder builder lazy) =>
+                               StreamConsumer a m lazy
+[2 of 5] Compiling Data.Conduit.Combinators.Internal ( Data/Conduit/Combinators/Internal.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Data/Conduit/Combinators/Internal.o )
+[3 of 5] Compiling Data.Conduit.Combinators ( Data/Conduit/Combinators.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Data/Conduit/Combinators.o )
+
+Data/Conduit/Combinators.hs:525:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: MWC.Variate a
+    • In the type signature for:
+           sourceRandomWith :: (MWC.Variate a, MonadIO m) =>
+                               (MWC.GenIO -> SIO.IO a) -> Producer m a
+
+Data/Conduit/Combinators.hs:534:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: MWC.Variate a
+    • In the type signature for:
+           sourceRandomNWith :: (MWC.Variate a, MonadIO m) =>
+                                Int -> (MWC.GenIO -> SIO.IO a) -> Producer m a
+
+Data/Conduit/Combinators.hs:546:1: warning: [-Wredundant-constraints]
+    • Redundant constraints: (MWC.Variate a, PrimMonad base)
+    • In the type signature for:
+           sourceRandomGenWith :: (MWC.Variate a, MonadBase base m,
+                                   PrimMonad base) =>
+                                  MWC.Gen (PrimState base)
+                                  -> (MWC.Gen (PrimState base) -> base a) -> Producer m a
+
+Data/Conduit/Combinators.hs:558:1: warning: [-Wredundant-constraints]
+    • Redundant constraints: (MWC.Variate a, PrimMonad base)
+    • In the type signature for:
+           sourceRandomNGenWith :: (MWC.Variate a, MonadBase base m,
+                                    PrimMonad base) =>
+                                   MWC.Gen (PrimState base)
+                                   -> Int -> (MWC.Gen (PrimState base) -> base a) -> Producer m a
+
+Data/Conduit/Combinators.hs:1020:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Monoid builder
+    • In the type signature for:
+           sinkLazyBuilderC :: (Monad m, Monoid builder, ToBuilder a builder,
+                                Builder builder lazy) =>
+                               Consumer a m lazy
+
+Data/Conduit/Combinators.hs:1020:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Monoid builder
+    • In the type signature for:
+           sinkLazyBuilder :: (Monad m, Monoid builder, ToBuilder a builder,
+                               Builder builder lazy) =>
+                              Consumer a m lazy
+[4 of 5] Compiling Data.Conduit.Combinators.Unqualified ( Data/Conduit/Combinators/Unqualified.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Data/Conduit/Combinators/Unqualified.o )
+
+Data/Conduit/Combinators/Unqualified.hs:193:1: warning: [-Wunused-imports]
+    The import of ‘Prelude’ is redundant
+      except perhaps to import instances from ‘Prelude’
+    To import instances alone, use: import Prelude()
+
+Data/Conduit/Combinators/Unqualified.hs:200:1: warning: [-Wunused-imports]
+    The qualified import of ‘Data.Conduit.List’ is redundant
+      except perhaps to import instances from ‘Data.Conduit.List’
+    To import instances alone, use: import Data.Conduit.List()
+
+Data/Conduit/Combinators/Unqualified.hs:202:1: warning: [-Wunused-imports]
+    The import of ‘Data.Maybe’ is redundant
+      except perhaps to import instances from ‘Data.Maybe’
+    To import instances alone, use: import Data.Maybe()
+
+Data/Conduit/Combinators/Unqualified.hs:212:1: warning: [-Wunused-imports]
+    The qualified import of ‘Prelude’ is redundant
+      except perhaps to import instances from ‘Prelude’
+    To import instances alone, use: import Prelude()
+
+Data/Conduit/Combinators/Unqualified.hs:770:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Monoid builder
+    • In the type signature for:
+           sinkLazyBuilder :: (Monad m, Monoid builder, ToBuilder a builder,
+                               Builder builder lazy) =>
+                              Consumer a m lazy
+[5 of 5] Compiling Conduit          ( Conduit.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Conduit.o )
+Installing library in
+/home/tombert/.stack/snapshots/x86_64-linux-nopie/lts-7.15/8.0.1/lib/x86_64-linux-ghc-8.0.1/conduit-combinators-1.0.8.3-KNus6UxuOfi75SnDjnFgwZ
+Registering conduit-combinators-1.0.8.3...

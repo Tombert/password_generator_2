@@ -1,0 +1,67 @@
+Configuring mono-traversable-1.0.1...
+Building mono-traversable-1.0.1...
+Preprocessing library mono-traversable-1.0.1...
+[1 of 5] Compiling Data.MonoTraversable ( src/Data/MonoTraversable.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Data/MonoTraversable.o )
+
+src/Data/MonoTraversable.hs:143:13: warning: [-Wredundant-constraints]
+    • Redundant constraints: (Element (f a) ~ a, f a ~ mono)
+    • In the type signature for:
+           omap :: (Functor f, Element (f a) ~ a, f a ~ mono) =>
+                   (a -> a) -> f a -> f a
+
+src/Data/MonoTraversable.hs:333:18: warning: [-Wredundant-constraints]
+    • Redundant constraint: a ~ Element (t a)
+    • In the type signature for:
+           ofoldr1Ex :: (t a ~ mono, a ~ Element (t a), Prelude.Foldable t) =>
+                        (a -> a -> a) -> mono -> a
+
+src/Data/MonoTraversable.hs:346:19: warning: [-Wredundant-constraints]
+    • Redundant constraint: a ~ Element (t a)
+    • In the type signature for:
+           ofoldl1Ex' :: (t a ~ mono, a ~ Element (t a),
+                          Prelude.Foldable t) =>
+                         (a -> a -> a) -> mono -> a
+
+src/Data/MonoTraversable.hs:1254:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: Ord k
+    • In the instance declaration for ‘GrowingAppend (Map k v)’
+
+src/Data/MonoTraversable.hs:1255:10: warning: [-Wredundant-constraints]
+    • Redundant constraints: (Eq k, Hashable k)
+    • In the instance declaration for ‘GrowingAppend (HashMap k v)’
+
+src/Data/MonoTraversable.hs:1256:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: Ord v
+    • In the instance declaration for ‘GrowingAppend (Set v)’
+
+src/Data/MonoTraversable.hs:1257:10: warning: [-Wredundant-constraints]
+    • Redundant constraints: (Eq v, Hashable v)
+    • In the instance declaration for ‘GrowingAppend (HashSet v)’
+[2 of 5] Compiling Data.MonoTraversable.Unprefixed ( src/Data/MonoTraversable/Unprefixed.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Data/MonoTraversable/Unprefixed.o )
+[3 of 5] Compiling Data.Containers  ( src/Data/Containers.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Data/Containers.o )
+[4 of 5] Compiling Data.Sequences   ( src/Data/Sequences.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Data/Sequences.o )
+
+src/Data/Sequences.hs:407:5: warning: [-Wredundant-constraints]
+    • Redundant constraint: IsSequence seq
+    • In the type signature for:
+           initMay :: (IsSequence seq, IsSequence seq) => seq -> Maybe seq
+      In the ambiguity check for ‘initMay’
+      To defer the ambiguity check to use sites, enable AllowAmbiguousTypes
+      When checking the class method:
+        initMay :: forall seq.
+                   (IsSequence seq, IsSequence seq) =>
+                   seq -> Maybe seq
+
+src/Data/Sequences.hs:1269:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Eq (Element seq)
+    • In the type signature for:
+           deleteBy :: (IsSequence seq, Eq (Element seq)) =>
+                       (Element seq -> Element seq -> Bool) -> Element seq -> seq -> seq
+[5 of 5] Compiling Data.NonNull     ( src/Data/NonNull.hs, .stack-work/dist/x86_64-linux-nopie/Cabal-1.24.0.0/build/Data/NonNull.o )
+
+src/Data/NonNull.hs:77:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: GrowingAppend mono
+    • In the instance declaration for ‘Semigroup (NonNull mono)’
+Installing library in
+/home/tombert/.stack/snapshots/x86_64-linux-nopie/lts-7.15/8.0.1/lib/x86_64-linux-ghc-8.0.1/mono-traversable-1.0.1-Ld3dObwRpRMG5VwCsYwl95
+Registering mono-traversable-1.0.1...
